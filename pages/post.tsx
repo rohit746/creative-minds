@@ -7,7 +7,7 @@ import {toast} from "react-toastify";
 
 const Post: React.FC = () => {
     const [post, setPost] = useState({description: ""});
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const route: NextRouter = useRouter();
     const submitPost = async (e: React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
